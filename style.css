@@ -1,0 +1,144 @@
+main{
+    display: flex;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    /* background: url("bg.jpg");
+    background-repeat: no-repeat; */
+    background-color: rgb(240, 200, 207);
+    background-attachment: fixed;
+    background-size: cover;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(47, 67, 86);
+}
+
+.proposal{
+    /* border: 2px solid black; */
+    display: flex;
+    height: 100vh;
+    width: 50vw;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.proposal .proposal-text{
+    padding: 1%;
+}
+
+.proposal img{
+    width: 90%;
+    height: 90%;
+    border-radius: 29%;
+    /* padding-left: 3%; */
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.proposal .card{
+    background-color: rgba(47, 67, 86, 0.651);
+    display: inline-block;
+    border-radius: 20%;
+    margin: 20px;
+}
+
+#play{
+    width: 20%;
+    image: url("My-Funny-Valentine.mp3");
+}
+#play:hover{
+    border-color: 2px solid green;
+}
+
+.buttons{
+    height: 2em;
+}
+
+.buttons button{
+    border-radius: 20px;
+    border:none;
+    width: 40%;
+    height: 70%;
+    color: white
+}
+
+.buttons #Yes{
+    background-color: rgb(16, 228, 16);
+    transition: all .1s ease-in-out;
+}
+
+.buttons #No{
+    background-color: rgb(181, 20, 20);
+    transition: all .1s ease-in-out;
+}
+
+#Yes:hover{
+    background-color: rgb(152, 255, 152);
+    cursor: pointer;
+}
+
+#No:hover{
+    background-color: rgb(232, 62, 130);
+    cursor: pointer;
+}
+
+#Yes:active{
+    transform: scale(.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    background-color: rgb(152, 255, 152);
+}
+
+#No:active{
+    transform: scale(.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    background-color: rgb(232, 62, 130);
+}
+
+/* text on click */
+.click-text{
+    display: flex;
+    /* border: 2px solid blue; */
+    width: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(237, 150, 164);
+
+    opacity: 0;
+    transform: translateY(10px); /* Start slightly below */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.click-text h2 {
+    font-size: 1.5rem;  /* Locks in font size */
+    font-weight: bold;  /* Ensures bold stays */
+    text-align: center;  /* Ensures consistent alignment */
+    font-family: 'Arial', sans-serif; /* Explicitly set font-family */
+    line-height: 1.4; /* Maintain spacing */
+    margin: 0; /* Prevents unwanted spacing shifts */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+@keyframes flowerFadeIn {
+    0% {
+        opacity: 0; /* Start invisible */
+        transform: translateY(20px); /* Start slightly below */
+    }
+    100% {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Move to normal position */
+    }
+}
+
+/* Style for the flower image */
+.click-text img {
+    animation: flowerFadeIn 1.5s ease-in-out forwards; /* Apply the fade-in animation */
+    width: 150px;  /* Size of the flower */
+    height: 150px; /* Size of the flower */
+    margin-top: 20px; /* Space between text and flower */
+}
